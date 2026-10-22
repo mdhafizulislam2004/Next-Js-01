@@ -51,12 +51,14 @@ const PageBlogs = () => {
     return (
         <div>
             <h3 className="text-3xl">Blogs</h3>
-            <div>
+            <div className='ml-4'>
                 {
-                    blogs.map(blog => <div className='border-2 border-white text-center w-2xl my-2 p-2' key={blog.id}>
-                        <h3 className="text-4xl my-2">{blog.title}</h3>
-                        <button className='btn bg-amber-400'>See More Diltes</button>
-                    </div>)
+                    blogs.map(blog =>
+
+                        <div className='border-2 border-white text-center w-2xl my-2 p-2' key={blog.id}>
+                            <h3 className="text-4xl my-2">{blog.title}</h3>
+                            <button className='btn bg-amber-400'>See More Diltes</button>
+                        </div>)
                 }
             </div>
         </div>
