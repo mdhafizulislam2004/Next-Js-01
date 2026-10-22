@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const blogs = [
@@ -57,7 +58,7 @@ const PageBlogs = () => {
 
                         <div className='border-2 border-white text-center w-2xl my-2 p-2' key={blog.id}>
                             <h3 className="text-4xl my-2">{blog.title}</h3>
-                            <button className='btn bg-amber-400'>See More Diltes</button>
+                            <Link href={`/blogs/${blog.id}`} className='btn bg-amber-400' >See More Diltes</Link>
                         </div>)
                 }
             </div>
