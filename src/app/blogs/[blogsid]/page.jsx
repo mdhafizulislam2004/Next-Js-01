@@ -49,21 +49,23 @@ const blogs = [
 ]
 
 
+
 const BlogsDitelsPage = async ({ params }) => {
 
-    const { blogsid } = await params
-    const blog = blogs.find(blog => blog.id === parseInt(blogsid))
 
-    console.log("Params Data", blog);
+const{blogsid}=await params;
+const blog= blogs.find(blog=>blog.id===parseInt(blogsid))
+console.log("Params Data",blog);
+
+    
+
+
     return (
         <div>
-            This Is Blogs Id Page
-            <h2 className='text-4xl font-bold'> {
-                blog.title
-            }</h2>
-            <h2 className='text-3xl font-bold'>{
-                blog.author
-            }</h2>
+
+    <h1>{blog.id}</h1>
+    <h2 className='text-4xl'>{blog.title}</h2>
+
         </div>
     );
 };
