@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const UserPage = async () => {
@@ -15,7 +16,7 @@ const UserPage = async () => {
                             <h2 className="card-title">{user.name}</h2>
                             <p>{user.company.catchPhrase}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn">{user.phone}</button>
+                                <button className="btn"> <Link href={`/user/${user.id}`}>Show More Info</Link> </button>
                             </div>
                         </div>
                     </div>)
